@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt update -q
-sudo apt install -y curl wget gnupg2 ca-certificates lsb-release apt-transport-https
-if [[ ! -f /etc/apt/source.list.d/php7.list ]]; then
+sudo apt install -y wget gnupg2 ca-certificates lsb-release apt-transport-https
+if [ ! -f "/etc/apt/source.list.d/php7.list" ]; then
 sudo curl https://packages.sury.org/php/apt.gpg | apt-key-add -
 sudo echo "deb http://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee /etc/apt/sources.list.d/php7.list
 sudo apt update -q
